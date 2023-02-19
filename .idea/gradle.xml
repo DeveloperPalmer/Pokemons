@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/pokemons" />
             <option value="$PROJECT_DIR$/feature/pokemons/routing" />
+            <option value="$PROJECT_DIR$/feature/pokemons/ui" />
           </set>
         </option>
       </GradleProjectSettings>

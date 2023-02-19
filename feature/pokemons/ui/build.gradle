@@ -4,10 +4,10 @@ plugins {
 }
 
 android {
-    namespace 'com.example.feature.pokemons.routing'
+    namespace 'com.example.feature.pokemonsui'
     compileSdk 33
 }
 
 dependencies {
-    implementation project(":feature:pokemons:ui")
+    api libs.bundles.androidUiLibs
 }

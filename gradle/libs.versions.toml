@@ -1,0 +1,236 @@
+[versions]
+kotlin = "1.7.21"
+coroutines = "1.6.0"
+compose = "1.3.3"
+composeMaterial = "1.3.1"
+composeCompiler = "1.4.0-alpha02"
+accompanist = "0.28.0"
+coil = "2.0.0"
+lifecycle = "2.5.1"
+snapper = "0.1.1"
+timber = "4.7.1"
+androidXCore = "1.9.0"
+androidXAnnotation = "1.5.0"
+kotlinResult = "1.1.16"
+navigation = "2.4.2"
+navigationKtx = "2.5.3"
+dagger = "2.43"
+androidExtensions = "1.6.1"
+anvil = "2.4.3"
+unicorn = "0.11.0"
+unicorn2 = "2.2.0"
+remo = "1.0.8"
+lottie = "5.0.2"
+wallet = "0.35.0-SNAPSHOT"
+playServicesLocation = "19.0.1"
+playServicesKtx = "1.6.1"
+playReview = "2.0.1"
+playReviewKtx = "2.0.0"
+detektRulesCompose = "1.2.2"
+ktor = "2.0.1"
+okio = "3.2.0"
+kotlinSerialization = "1.6.1"
+securityCrypto = "1.1.0-alpha01" # avoid upgrading to alpha03 https://issuetracker.google.com/issues/164901843
+googleTink = "1.7.0"
+dataStore = "1.0.0"
+protobuf = "3.21.1"
+sqlDelight = "1.5.4"
+openApiGradle = "5.1.1" # https://github.com/OpenAPITools/openapi-generator/issues/9935
+playServicesAuth = "20.3.0"
+playServicesAuthApiPhone = "18.0.1"
+facebookAuth = "15.1.0"
+splashScreen = "1.0.0"
+firebaseAnalytics = "21.0.0"
+firebaseDynamicLinks = "21.1.0"
+firebaseMessaging = "23.0.5"
+firebaseConfig = "21.1.0"
+androidCar = "1.2.0-rc01"
+crashlytics = "18.2.12"
+arrowOptics = "1.1.3"
+koTest = "5.5.1"
+turbine = "0.11.0"
+mockito = "4.0.0"
+workManager = "2.7.1"
+vkSdk = "3.5.1"
+appAuth = "0.11.1"
+dentGigastore = "1.0.0"
+kotlinPoet = "1.12.0"
+
+[libraries]
+androidXAnnotations = { module = "androidx.annotation:annotation", version.ref = "androidXAnnotation" }
+androidXCore = { module = "androidx.core:core", version.ref = "androidXCore" }
+androidXCoreKtx = { module = "androidx.core:core-ktx", version.ref = "androidXCore" }
+androidXActivity = { module = "androidx.activity:activity", version.ref = "androidExtensions" }
+activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidExtensions" }
+
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+kotlinResult = { module = "com.michael-bull.kotlin-result:kotlin-result", version.ref = "kotlinResult" }
+kotlinResultCoroutines = { module = "com.michael-bull.kotlin-result:kotlin-result-coroutines", version.ref = "kotlinResult" }
+
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+composeTest = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
+composeUiUtil = { module = "androidx.compose.ui:ui-util", version.ref = "compose" }
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
+composeMaterialIcons = { module = "androidx.compose.material:material-icons-core", version.ref = "composeMaterial" }
+composeTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+composeRuntime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+composeCompiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
+composeGraphics = { module = "androidx.compose.animation:animation-graphics", version.ref = "compose" }
+navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+navigationKtx = { module = "androidx.navigation:navigation-common-ktx", version.ref = "navigationKtx" }
+
+accompanistSystemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanistFlowLayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
+accompanistPager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
+accompanistPagerIndicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
+accompanistSwipeRefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+accompanistPlaceholder = { module = "com.google.accompanist:accompanist-placeholder", version.ref = "accompanist" }
+
+coilBase = { module = "io.coil-kt:coil-base", version.ref = "coil" }
+coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+lifecycle = { module = "androidx.lifecycle:lifecycle-common", version.ref = "lifecycle" }
+lifecycleProcess = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+lottieCompose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+kotlinCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinCoroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+snapper = { module = "dev.chrisbanes.snapper:snapper", version.ref = "snapper" }
+
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+daggerCompiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+
+unicorn = { module = "ru.dimsuz:unicorn-coroutines", version.ref = "unicorn" }
+unicorn2 = { module = "ru.dimsuz:unicorn2", version.ref = "unicorn2" }
+
+remo = { module = "ru.kode:remo", version.ref = "remo" }
+
+
+splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+
+javaxInject = { module = "javax.inject:javax.inject", version = "1" }
+
+playServicesLocation = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+playServicesKtx = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "playServicesKtx" }
+
+playReview = { module = "com.google.android.play:review", version.ref = "playReview" }
+playReviewKtx = { module = "com.google.android.play:review-ktx", version.ref = "playReviewKtx" }
+
+wallet = { module = "org.n2.wallet:wallet-sdk", version.ref = "wallet" }
+
+dataStoreCore = { module = "androidx.datastore:datastore-core", version.ref = "dataStore" }
+dataStorePreferences = { module = "androidx.datastore:datastore-preferences", version.ref = "dataStore" }
+protobufJavalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobuf" }
+protobufProtoc = { module = "com.google.protobuf:protoc", version.ref = "protobuf" }
+
+detektRulesCompose = { module = "ru.kode:detekt-rules-compose", version.ref = "detektRulesCompose" }
+
+ktor = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorAndroidEngine = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktorSerialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktorLogging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktorAuth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktorContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation-jvm", version.ref = "ktor" }
+ktorJsonSerialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
+okioFakeFileSystem = { module = "com.squareup.okio:okio-fakefilesystem", version.ref = "okio" }
+
+sqlDelightPlugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
+sqlDelightAndroidDriver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelight" }
+sqlDelightJvmDriver = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqlDelight" }
+sqlDelightCoroutines = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
+sqlDelightRuntime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelight" }
+
+androidSecurity = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+tink = { module = "com.google.crypto.tink:tink-android", version.ref = "googleTink" }
+
+playServicesAuth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+playServicesAuthApiPhone = { module = "com.google.android.gms:play-services-auth-api-phone", version.ref = "playServicesAuthApiPhone" }
+facebookAuth = { module = "com.facebook.android:facebook-login", version.ref = "facebookAuth" }
+
+firebaseAnalytics = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalytics" }
+firebaseMessaging = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebaseMessaging" }
+firebaseConfig = { module = "com.google.firebase:firebase-config-ktx", version.ref = "firebaseConfig" }
+firebaseDynamicLinks = { module = "com.google.firebase:firebase-dynamic-links-ktx", version.ref = "firebaseDynamicLinks" }
+
+androidCar = { module = "androidx.car.app:app", version.ref = "androidCar" }
+androidCarAuto = { module = "androidx.car.app:app-projected", version.ref = "androidCar" }
+
+crashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "crashlytics" }
+crashlyticsNdk = { module = "com.google.firebase:firebase-crashlytics-ndk", version.ref = "crashlytics" }
+
+arrowOptics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrowOptics" }
+arrowOpticsKsp = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrowOptics" }
+koTestRunner = { module = "io.kotest:kotest-runner-junit5", version.ref = "koTest" }
+koTestAssertions = { module = "io.kotest:kotest-assertions-core", version.ref = "koTest" }
+koTestProperty = { module = "io.kotest:kotest-property", version.ref = "koTest" }
+koTestData = { module = "io.kotest:kotest-framework-datatest", version.ref = "koTest" }
+mockito = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+workManagerKtx = { module = "androidx.work:work-runtime-ktx", version.ref = "workManager" }
+vkSdkCore = { module = "com.vk:android-sdk-core", version.ref = "vkSdk" }
+vkSdkApi = { module = "com.vk:android-sdk-api", version.ref = "vkSdk" }
+appAuth = { module = "net.openid:appauth", version.ref = "appAuth" }
+dentGigastore = { module = "com.github.dent-jitpack:gigastore-android-sdk", version.ref = "dentGigastore" }
+
+kotlinPoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinPoet" }
+
+[bundles]
+coreLibs = [
+    "kotlinCoroutinesCore",
+    "kotlinCoroutinesAndroid",
+    "kotlinResult",
+    "kotlinResultCoroutines",
+    "timber",
+]
+
+androidCoreLibs = [
+    "androidXAnnotations",
+    "androidXCore",
+    "androidXCoreKtx",
+]
+
+androidUiLibs = [
+    "composeUi",
+    "composeTest",
+    "composeUiUtil",
+    "composeMaterial",
+    "composeMaterialIcons",
+    "composeTooling",
+    "composeRuntime",
+    "composeCompiler",
+    "accompanistSystemUiController",
+    "accompanistPager",
+    "accompanistFlowLayout",
+    "accompanistPagerIndicators",
+    "accompanistSwipeRefresh",
+    "accompanistPlaceholder",
+    "composeGraphics",
+    "snapper",
+    "coilBase",
+    "coilCompose",
+    "unicorn",
+    "navigation",
+    "navigationKtx",
+]
+
+androidCar = [
+    "androidCar",
+    "androidCarAuto",
+]
+
+unitTestingKoTest = [
+    "koTestAssertions",
+    "koTestRunner",
+    "koTestProperty",
+    "koTestData"
+]
+
+[plugins]
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sqlDelight = { id = "com.squareup.sqldelight:gradle-plugin:", version.ref = "sqlDelight" }
+openApi = { id = "org.openapi.generator", version.ref = "openApiGradle" }
+anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
+protobuf = { id = "com.google.protobuf", version = "0.8.18" }
+ksp = { id = "com.google.devtools.ksp", version = "1.7.21-1.0.8" }
