@@ -1,0 +1,11 @@
+plugins {
+    id 'android-library-convention'
+}
+
+dependencies {
+    api libs.bundles.coreLibs
+}
+
+android {
+    namespace 'com.sla.feature.app.domain'
+}

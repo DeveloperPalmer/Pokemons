@@ -1,0 +1,16 @@
+plugins {
+    alias(libs.plugins.anvil)
+    id 'android-library-convention'
+}
+
+dependencies {
+    api project(':core:data')
+    api project(":feature:app:domain")
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.sla.feature.app.data'
+}

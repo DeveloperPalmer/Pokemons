@@ -1,0 +1,24 @@
+plugins {
+    id 'android-library-convention'
+    alias(libs.plugins.anvil)
+    alias(libs.plugins.kotlinSerialization)
+}
+
+dependencies {
+    implementation project(':feature:app:domain')
+    implementation project(':core:data')
+    implementation project(':core:domain')
+    implementation project(':feature:pokemons:domain')
+
+    implementation libs.ktor
+    implementation libs.ktorAuth
+    implementation libs.ktorJsonSerialization
+    implementation libs.ktorContentNegotiation
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.sla.feature.pokemons.data'
+}

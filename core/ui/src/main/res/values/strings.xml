@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_cards_tab">All cards</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="close">Close</string>
+    <string name="try_again">Try againg</string>
+    <string name="something_is_not_working">Something is not working</string>
+    <string name="error_system_message">System error</string>
+    <string name="account_created_message">Account created</string>
+    <string name="email_error">Incorrect email</string>
+    <string name="password_error">Incorrect password</string>
+    <string name="password_mismatch_error">Passwords mismatch</string>
+    <string name="account_not_found">Account not found</string>
+    <string name="invalid_account">Incorrect email or password</string>
+    <string name="profile">Profile</string>
+    <string name="change_email">Change email</string>
+    <string name="logout">Log Out</string>
+    <string name="change_password">Change password</string>
+    <string name="my_collection">My collection</string>
+    <string name="account_already_created_error">Account already created</string>
+    <string name="create_account">Create Account</string>
+    <string name="hello">Hello</string>
+    <string name="login_to_start_working">Please log in to the system to start working</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hide">HIDE</string>
+    <string name="show">SHOW</string>
+    <string name="repeate_password">Repeat the password</string>
+    <string name="account_already_created_message">Account already created</string>
+    <string name="edit_email">Edit Email</string>
+    <string name="edit_password">Edit password</string>
+    <string name="old_password">Old password</string>
+    <string name="new_password">New password</string>
+    <string name="repeat_new_password">Repeat the new password</string>
+    <string name="save">Save</string>
+</resources>

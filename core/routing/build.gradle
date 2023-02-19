@@ -1,0 +1,15 @@
+plugins {
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+}
+
+dependencies {
+    api project(':core:domain')
+    api project(':core:ui')
+    api project(':navigation')
+    api project(":mvi")
+}
+
+android {
+    namespace 'com.sla.core.routing'
+}

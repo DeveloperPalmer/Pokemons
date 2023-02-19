@@ -1,0 +1,11 @@
+android {
+  composeOptions {
+    kotlinCompilerExtensionVersion libs.versions.composeCompiler.get()
+  }
+  buildFeatures {
+    compose = true
+  }
+  kotlinOptions {
+    jvmTarget = '17'
+  }
+}

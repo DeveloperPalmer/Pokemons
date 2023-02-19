@@ -1,0 +1,17 @@
+plugins {
+    id 'android-library-convention'
+    alias(libs.plugins.anvil)
+}
+
+dependencies {
+    api project(":core:domain")
+    api project(":feature:auth:domain")
+
+    implementation libs.dagger
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.sla.feature.pokemons.domain'
+}

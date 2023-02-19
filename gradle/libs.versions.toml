@@ -1,0 +1,143 @@
+[versions]
+kotlin = "1.8.21"
+coroutines = "1.6.0"
+compose = "1.4.2"
+composeMaterial = "1.3.1"
+composeCompiler = "1.4.7"
+accompanist = "0.30.1"
+coil = "2.0.0"
+lifecycle = "2.6.1"
+timber = "4.7.1"
+androidXCore = "1.9.0"
+androidXAnnotation = "1.5.0"
+kotlinResult = "1.1.16"
+navigation = "2.4.2"
+navigationKtx = "2.5.3"
+dagger = "2.46.1"
+androidExtensions = "1.6.1"
+anvil = "2.4.6"
+unicorn = "0.11.0"
+unicorn2 = "2.2.0"
+remo = "1.0.8"
+lottie = "5.0.2"
+ktor = "2.0.1"
+kotlinSerialization = "1.6.1"
+sqlDelight = "1.5.4"
+splashScreen = "1.0.0"
+arrowOptics = "1.1.3"
+coroutine_adapter = "0.9.2"
+dataStore = "1.0.0"
+room = "2.5.2"
+
+[libraries]
+androidXAnnotations = { module = "androidx.annotation:annotation", version.ref = "androidXAnnotation" }
+androidXCore = { module = "androidx.core:core", version.ref = "androidXCore" }
+androidXCoreKtx = { module = "androidx.core:core-ktx", version.ref = "androidXCore" }
+androidXActivity = { module = "androidx.activity:activity", version.ref = "androidExtensions" }
+activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidExtensions" }
+
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+kotlinResult = { module = "com.michael-bull.kotlin-result:kotlin-result", version.ref = "kotlinResult" }
+kotlinResultCoroutines = { module = "com.michael-bull.kotlin-result:kotlin-result-coroutines", version.ref = "kotlinResult" }
+
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+composeTest = { module = "androidx.compose.ui:ui-test", version.ref = "compose" }
+composeUiUtil = { module = "androidx.compose.ui:ui-util", version.ref = "compose" }
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
+composeMaterialIcons = { module = "androidx.compose.material:material-icons-core", version.ref = "composeMaterial" }
+composeTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+composeRuntime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+composeCompiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
+composeGraphics = { module = "androidx.compose.animation:animation-graphics", version.ref = "compose" }
+navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+navigationKtx = { module = "androidx.navigation:navigation-common-ktx", version.ref = "navigationKtx" }
+
+accompanistSystemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanistFlowLayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
+accompanistPager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
+accompanistPagerIndicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
+accompanistSwipeRefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+accompanistPlaceholder = { module = "com.google.accompanist:accompanist-placeholder", version.ref = "accompanist" }
+
+coilBase = { module = "io.coil-kt:coil-base", version.ref = "coil" }
+coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coilSVG = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
+
+lifecycle = { module = "androidx.lifecycle:lifecycle-common", version.ref = "lifecycle" }
+lifecycleProcess = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
+lottieCompose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+kotlinCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinCoroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+daggerCompiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+
+unicorn = { module = "ru.dimsuz:unicorn-coroutines", version.ref = "unicorn" }
+unicorn2 = { module = "ru.dimsuz:unicorn2", version.ref = "unicorn2" }
+
+remo = { module = "ru.kode:remo", version.ref = "remo" }
+
+splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+
+javaxInject = { module = "javax.inject:javax.inject", version = "1" }
+
+ktor = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorAndroidEngine = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktorSerialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktorLogging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktorAuth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktorContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation-jvm", version.ref = "ktor" }
+ktorJsonSerialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+roomKtx = { module = "androidx.room:room-ktx", version.ref = "room" }
+roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+
+dataStoreCore = { module = "androidx.datastore:datastore-core", version.ref = "dataStore" }
+dataStorePreferences = { module = "androidx.datastore:datastore-preferences", version.ref = "dataStore" }
+
+[bundles]
+coreLibs = [
+    "kotlinCoroutinesCore",
+    "kotlinCoroutinesAndroid",
+    "kotlinResult",
+    "kotlinResultCoroutines",
+    "timber",
+]
+
+androidCoreLibs = [
+    "androidXAnnotations",
+    "androidXCore",
+    "androidXCoreKtx",
+]
+
+androidUiLibs = [
+    "composeUi",
+    "composeTest",
+    "composeUiUtil",
+    "composeMaterial",
+    "composeMaterialIcons",
+    "composeTooling",
+    "composeRuntime",
+    "composeCompiler",
+    "accompanistSystemUiController",
+    "accompanistPager",
+    "accompanistFlowLayout",
+    "accompanistPagerIndicators",
+    "accompanistSwipeRefresh",
+    "accompanistPlaceholder",
+    "composeGraphics",
+    "coilBase",
+    "coilCompose",
+    "coilSVG",
+    "unicorn",
+    "navigation",
+    "navigationKtx",
+]
+
+[plugins]
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sqlDelight = { id = "com.squareup.sqldelight:gradle-plugin:", version.ref = "sqlDelight" }
+anvil = { id = "com.squareup.anvil", version.ref = "anvil" }

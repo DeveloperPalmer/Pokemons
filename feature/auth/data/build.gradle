@@ -1,0 +1,23 @@
+plugins {
+    id 'android-library-convention'
+    alias(libs.plugins.anvil)
+    alias(libs.plugins.kotlinSerialization)
+}
+
+dependencies {
+    api project(':core:data')
+    api project(':feature:app:data')
+
+    api project(':feature:auth:domain')
+
+    implementation libs.room
+    implementation libs.roomKtx
+    implementation libs.dagger
+
+    kapt libs.roomCompiler
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.sla.feature.auth.data'
+}

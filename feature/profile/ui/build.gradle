@@ -1,0 +1,17 @@
+plugins {
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+    alias(libs.plugins.anvil)
+}
+
+dependencies {
+    api project(":core:ui")
+    api project(':feature:profile:domain')
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.example.feature.profile.ui'
+}

@@ -1,0 +1,19 @@
+plugins {
+    alias(libs.plugins.anvil)
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+}
+
+dependencies {
+    api project(':core:routing')
+
+    api project(":feature:profile:ui")
+    api project(":feature:profile:domain")
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
+}
+
+android {
+    namespace 'com.example.feature.profile.routing'
+}

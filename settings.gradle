@@ -13,7 +13,29 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Pokemons"
+includeBuild("build-logic")
+
+
 include ':app'
-include ':feature'
+include ':mvi'
+include ':core:domain'
 include ':feature:pokemons'
+include ':feature:pokemons:ui'
+include ':feature:pokemons:data'
+include ':feature:pokemons:domain'
 include ':feature:pokemons:routing'
+include ':core:ui'
+include ':core:routing'
+include ':navigation'
+include ':feature:login:routing'
+include ':feature:login:domain'
+include ':feature:login:ui'
+include ':feature:auth:data'
+include ':feature:auth:domain'
+include ':feature:app:domain'
+include ':feature:app:data'
+include ':core:data'
+include ':feature:profile'
+include ':feature:profile:ui'
+include ':feature:profile:domain'
+include ':feature:profile:routing'
