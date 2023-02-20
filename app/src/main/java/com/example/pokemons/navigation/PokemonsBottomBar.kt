@@ -30,18 +30,14 @@ fun PokemonsBottomBar(
       Column(
         verticalArrangement = Arrangement.spacedBy(4.dp)
       ) {
-        IconButton(
-          onClick = { onNavigateToDestination(tab) }
-        ) {
+        IconButton(onClick = { onNavigateToDestination(tab) }) {
           Icon(
             painter = painterResource(id = tab.iconRes),
             tint = MaterialTheme.colors.primary,
             contentDescription = null
           )
         }
-        Text(
-          text = tab.title
-        )
+        Text(text = tab.title)
       }
     }
   }

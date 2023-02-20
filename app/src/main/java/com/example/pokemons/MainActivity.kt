@@ -1,20 +1,20 @@
 package com.example.pokemons
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navOptions
+import com.example.pokemons.navigation.PokemonsBottomBar
 import com.example.pokemons.navigation.PokemonsNavHost
+import com.example.pokemons.navigation.RootDestination
 import com.example.pokemons.ui.theme.PokemonsTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,17 +22,29 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       PokemonsTheme {
-        Scaffold { padding ->
-          Box(
-            modifier = Modifier
-              .fillMaxSize()
-              .padding(padding)
-          ) {
+        val navController = rememberNavController()
+        Scaffold(
+          backgroundColor = Color.Transparent,
+          content = { padding ->
             PokemonsNavHost(
-              navController = rememberNavController()
+              modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
+              navController = navController
             )
-          }
-        }
+          },
+          bottomBar = {
+            PokemonsBottomBar(
+              destinations = RootDestination.values().asList(),
+              onNavigateToDestination = { destination ->
+                navController.navigate(
+                  route = destination.id,
+                  navOptions = navOptions { launchSingleTop = true; restoreState = true }
+                )
+              }
+            )
+          },
+        )
       }
     }
   }

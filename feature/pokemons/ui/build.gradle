@@ -1,11 +1,6 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-}
-
-android {
-    namespace 'com.example.feature.pokemonsui'
-    compileSdk 33
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
 }
 
 dependencies {

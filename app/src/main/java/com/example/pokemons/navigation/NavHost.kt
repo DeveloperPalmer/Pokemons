@@ -2,6 +2,7 @@ package com.example.pokemons.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.example.feature.pokemons.routing.pokemonsGraph
@@ -10,11 +11,13 @@ import com.example.pokemons.R
 
 @Composable
 fun PokemonsNavHost(
-  navController: NavHostController
+  navController: NavHostController,
+  modifier: Modifier = Modifier,
 ) {
   NavHost(
-    navController =navController ,
-    startDestination = pokemonsMainRoute
+    modifier = modifier,
+    navController = navController,
+    startDestination = pokemonsGraph
   ) {
     pokemonsGraph()
   }
@@ -25,10 +28,10 @@ enum class RootDestination(
   @DrawableRes
   val iconRes: Int,
   val title: String,
-){
+) {
   Pokemons(
-    id = "root_pokemons",
+    id = pokemonsMainRoute,
     iconRes = R.drawable.ic_heart_broken_24,
     title = "Pokemons"
-  )
+  ),
 }
