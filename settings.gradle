@@ -13,6 +13,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Pokemons"
+includeBuild("build-logic")
+
+
 include ':app'
 include ':feature'
 include ':feature:pokemons'
