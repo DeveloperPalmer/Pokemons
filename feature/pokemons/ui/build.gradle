@@ -4,5 +4,7 @@ plugins {
 }
 
 dependencies {
-    api libs.bundles.androidUiLibs
+    implementation project(":core:ui")
+
+
 }

@@ -1,0 +1,13 @@
+plugins {
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+}
+
+dependencies {
+    api project(":core:domain")
+    api project(":mvi")
+    api libs.coilBase
+    api libs.coilCompose
+    api libs.bundles.androidCoreLibs
+    api libs.bundles.androidUiLibs
+}
