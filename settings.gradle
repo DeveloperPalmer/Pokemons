@@ -17,6 +17,7 @@ includeBuild("build-logic")
 
 
 include ':app'
+include ':mvi'
 include ':core:data'
 include ':core:domain'
 include ':feature:pokemons'

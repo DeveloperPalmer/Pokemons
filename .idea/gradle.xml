@@ -32,6 +32,7 @@
             <option value="$PROJECT_DIR$/feature/pokemons/domain" />
             <option value="$PROJECT_DIR$/feature/pokemons/routing" />
             <option value="$PROJECT_DIR$/feature/pokemons/ui" />
+            <option value="$PROJECT_DIR$/mvi" />
           </set>
         </option>
       </GradleProjectSettings>
