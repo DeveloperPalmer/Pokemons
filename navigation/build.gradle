@@ -1,0 +1,13 @@
+plugins {
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+}
+
+dependencies {
+    api project(':mvi')
+    api libs.javaxInject
+    // IMPORTANT! DO NOT ADD any mwm-specific dependencies here, this module should
+    //   be library only, it may be factored out to an external library
+    //   all project specific ui stuff goes into core.routing or modules which depend on it
+}
+
