@@ -13,6 +13,10 @@ android {
   }
 
   compileOptions {
+    // Enable desugaring to use java datetime with minApi <26
+    // https://developer.android.com/studio/write/java8-support#library-desugaring
+    coreLibraryDesugaringEnabled = true
+
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
