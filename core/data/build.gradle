@@ -1,8 +1,11 @@
 plugins {
     id 'android-library-convention'
     id 'org.jetbrains.kotlin.android'
+    alias(libs.plugins.anvil)
 }
 
 dependencies {
     api project(':core:domain')
+    api libs.bundles.coreLibs
+    api libs.bundles.androidCoreLibs
 }

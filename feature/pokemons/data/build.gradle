@@ -1,9 +1,12 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id 'android-library-convention'
 }
 
 dependencies {
+    api project(':core:data')
     implementation project(':core:domain')
     implementation project(':feature:pokemons:domain')
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
 }
