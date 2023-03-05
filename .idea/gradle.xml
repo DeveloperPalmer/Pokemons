@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/pokemons" />
             <option value="$PROJECT_DIR$/feature/pokemons/data" />
+            <option value="$PROJECT_DIR$/feature/pokemons/domain" />
             <option value="$PROJECT_DIR$/feature/pokemons/routing" />
             <option value="$PROJECT_DIR$/feature/pokemons/ui" />
           </set>

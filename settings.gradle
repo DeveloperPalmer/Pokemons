@@ -17,10 +17,10 @@ includeBuild("build-logic")
 
 
 include ':app'
-include ':feature'
+include ':core:data'
+include ':core:domain'
 include ':feature:pokemons'
 include ':feature:pokemons:ui'
 include ':feature:pokemons:data'
+include ':feature:pokemons:domain'
 include ':feature:pokemons:routing'
-include ':core:data'
-include ':core:domain'

@@ -1,9 +1,14 @@
 plugins {
     id 'android-library-convention'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    alias(libs.plugins.anvil)
 }
 
 dependencies {
     api libs.bundles.coreLibs
     api libs.composeRuntime
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
 }
