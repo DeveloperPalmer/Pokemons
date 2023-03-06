@@ -1,7 +1,11 @@
 plugins {
     id 'android-library-convention'
+    alias(libs.plugins.anvil)
 }
 
 dependencies {
     implementation project(":core:domain")
+
+    implementation libs.dagger
+    kapt libs.daggerCompiler
 }

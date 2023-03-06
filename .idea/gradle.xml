@@ -26,14 +26,19 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/domain" />
+            <option value="$PROJECT_DIR$/core/routing" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/bottombar" />
+            <option value="$PROJECT_DIR$/feature/bottombar/domain" />
+            <option value="$PROJECT_DIR$/feature/bottombar/ui" />
             <option value="$PROJECT_DIR$/feature/pokemons" />
             <option value="$PROJECT_DIR$/feature/pokemons/data" />
             <option value="$PROJECT_DIR$/feature/pokemons/domain" />
             <option value="$PROJECT_DIR$/feature/pokemons/routing" />
             <option value="$PROJECT_DIR$/feature/pokemons/ui" />
             <option value="$PROJECT_DIR$/mvi" />
+            <option value="$PROJECT_DIR$/navigation" />
           </set>
         </option>
       </GradleProjectSettings>

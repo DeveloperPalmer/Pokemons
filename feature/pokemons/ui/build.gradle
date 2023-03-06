@@ -1,10 +1,15 @@
 plugins {
     id 'android-library-convention'
     id 'android-compose-ui-convention'
+    alias(libs.plugins.anvil)
 }
 
 dependencies {
     implementation project(":core:ui")
 
-
+    api project(":feature:pokemons:domain")
+    api libs.bundles.androidUiLibs
+    
+    implementation libs.dagger
+    kapt libs.daggerCompiler
 }

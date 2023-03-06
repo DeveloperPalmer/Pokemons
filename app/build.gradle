@@ -51,8 +51,11 @@ android {
 dependencies {
     implementation libs.bundles.androidUiLibs
     implementation libs.dagger
+    implementation 'com.google.ar:core:1.30.0'
     kapt libs.daggerCompiler
 
-    implementation project(':core:domain')
-    implementation project(":feature:pokemons:routing")
+    api project(':core:domain')
+    api project(':feature:bottombar:ui')
+    api project(':feature:bottombar:domain')
+    api project(":feature:pokemons:routing")
 }

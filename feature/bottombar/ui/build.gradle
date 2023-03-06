@@ -1,0 +1,9 @@
+plugins {
+    id 'android-library-convention'
+    id 'android-compose-ui-convention'
+}
+
+dependencies {
+    implementation project(':feature:bottombar:domain')
+    implementation project(':core:ui')
+}
