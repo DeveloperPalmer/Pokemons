@@ -35,7 +35,7 @@ object PokemonsFlow {
 
     override fun handleEvent(event: FlowEvent) {
       when(event) {
-        else -> Unit
+        is FlowEvent.CreateAccountRequested -> controller.pushMain(route = PokemonsRoutes.CreateAccount)
       }
     }
   }

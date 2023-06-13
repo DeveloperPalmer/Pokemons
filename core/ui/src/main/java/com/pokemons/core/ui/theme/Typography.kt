@@ -51,7 +51,7 @@ data class AppTypography internal constructor(
     fontFamily = Roboto,
     fontWeight = FontWeight.Medium,
     fontSize = 16.sp,
-    lineHeight = 20.sp,
+    lineHeight = 22.sp,
   ),
   val subtitle: TextStyle = TextStyle(
     fontFamily = Roboto,

@@ -1,4 +1,4 @@
-package com.pokemons.feature.pokemons.ui.screen.main
+package com.pokemons.feature.pokemons.ui.screen.create
 
 import com.pokemons.feature.pokemons.domain.PokemonsModel
 import com.pokemons.feature.pokemons.ui.navigation.FlowEvent
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import ru.dimsuz.unicorn.coroutines.MachineDsl
 import javax.inject.Inject
 
-class PokemonsMainViewModel @Inject constructor(
+class CreateAccountViewModel @Inject constructor(
   private val pokemonsModel: PokemonsModel,
   private val flowEvents: MutableSharedFlow<FlowEvent>
 ): BaseViewModel<ViewState, ViewIntents, Unit, Unit>() {
@@ -41,13 +41,8 @@ class PokemonsMainViewModel @Inject constructor(
         )
       }
     }
-    onEach(intent(ViewIntents::signIn)) {
-
-    }
     onEach(intent(ViewIntents::createAccount)) {
-      action { _, _, _ ->
-        flowEvents.tryEmit(FlowEvent.CreateAccountRequested)
-      }
+
     }
   }
 }
