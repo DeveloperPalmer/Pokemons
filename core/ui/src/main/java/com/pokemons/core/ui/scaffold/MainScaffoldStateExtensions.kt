@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterialApi::class)
-
 package com.pokemons.core.ui.scaffold
 
 import androidx.compose.material.ExperimentalMaterialApi
@@ -22,8 +20,6 @@ fun MainScaffoldController.pushMain(
   requestStateChange { state -> state.copy(route = route) }
 }
 
-@OptIn(
-  ExperimentalMaterialApi::class)
 fun MainScaffoldController.pushBottomSheet(
   route: Route,
   state: BottomSheetState,

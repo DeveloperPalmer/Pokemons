@@ -253,7 +253,7 @@ private fun BottomSheetContent(
       .fillMaxWidth()
       .let { if (contentState != null) it.sheetContent(contentState) else it }
       .background(
-        color = AppTheme.colors.backgroundMain,
+        color = AppTheme.colors.white,
         shape = RoundedCornerShape(topStart = corner.value, topEnd = corner.value)
       )
   ) {

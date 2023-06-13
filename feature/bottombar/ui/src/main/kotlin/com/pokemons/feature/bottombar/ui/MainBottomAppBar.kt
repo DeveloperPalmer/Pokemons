@@ -63,7 +63,7 @@ fun MainBottomAppBar(
       ScreenRotation.PortraitDown -> {
         Box(
           modifier = Modifier
-            .background(color = AppTheme.colors.backgroundSecondary)
+            .background(color = AppTheme.colors.white)
             .navigationBarsPadding(),
         ) {
           HorizontalBottomAppBar(
@@ -159,7 +159,7 @@ private fun Badge(
       .offset(x = 13.dp)
       .defaultMinSize(minWidth = minSize, minHeight = minSize)
       .background(
-        color = AppTheme.colors.indicatorContentAttention,
+        color = AppTheme.colors.white,
         shape = RoundedCornerShape(40.dp)
       )
       .padding(horizontal = 4.dp),
@@ -168,7 +168,7 @@ private fun Badge(
     if (badge is Badge.Count) {
       Text(
         text = if (badge.count > 99) "99+" else badge.count.toString(),
-        color = AppTheme.colors.textPrimaryButton,
+        color = AppTheme.colors.white,
         style = AppTheme.typography.caption4
       )
     }
@@ -183,7 +183,7 @@ sealed class Badge {
 @Composable
 fun HorizontalDivider(
   modifier: Modifier = Modifier,
-  color: Color = AppTheme.colors.contentSecondary,
+  color: Color = AppTheme.colors.white,
   thickness: Dp = 1.dp,
   startIndent: Dp = 0.dp,
   endIndent: Dp = 0.dp,
@@ -204,7 +204,7 @@ fun HorizontalDivider(
 @Composable
 fun VerticalDivider(
   modifier: Modifier = Modifier,
-  color: Color = AppTheme.colors.contentSecondary,
+  color: Color = AppTheme.colors.white,
   thickness: Dp = 1.dp,
   topIndent: Dp = 0.dp,
   bottomIndent: Dp = 0.dp,
@@ -232,7 +232,7 @@ fun HorizontalBottomAppBar(
   Row(
     modifier = modifier
       .fillMaxWidth()
-      .background(AppTheme.colors.backgroundSecondary),
+      .background(AppTheme.colors.white),
     verticalAlignment = Alignment.CenterVertically
   ) {
     tabs.forEach { tab ->
@@ -263,7 +263,7 @@ fun VerticalBottomAppBar(
   Column(
     modifier = modifier
       .background(
-        color = AppTheme.colors.backgroundSecondary,
+        color = AppTheme.colors.white,
         shape = RoundedCornerShape(20.dp),
       )
       .clip(RoundedCornerShape(20.dp)),
@@ -299,9 +299,9 @@ private fun BottomBarTab(
 ) {
   val iconTint by animateColorAsState(
     targetValue = if (isActive) {
-      AppTheme.colors.brandColorAccent
+      AppTheme.colors.white
     } else {
-      AppTheme.colors.contentTertiary
+      AppTheme.colors.white
     },
     animationSpec = tween(150)
   )
@@ -309,7 +309,7 @@ private fun BottomBarTab(
     targetValue = if (isActive) {
       AppTheme.colors.textPrimary
     } else {
-      AppTheme.colors.contentTertiary
+      AppTheme.colors.white
     },
     animationSpec = tween(150)
   )

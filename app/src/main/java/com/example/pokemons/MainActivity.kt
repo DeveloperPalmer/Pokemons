@@ -1,13 +1,14 @@
 package com.example.pokemons
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.SaveableStateHolder
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.Modifier
@@ -42,7 +43,6 @@ import com.pokemons.mvi.screen.transition.LocalScreenTransitionsProvider
 import com.pokemons.navigation.ScreenRegistry
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import java.util.concurrent.ConcurrentHashMap
 
 class MainActivity : ComponentActivity() {
@@ -52,7 +52,6 @@ class MainActivity : ComponentActivity() {
   // depends on some objects which can only be constructed in a Composable context...
   // (this may change with the new navigation library)
   private val coroutineScope = CoroutineScope(Dispatchers.Default)
-  private var carConnectionJob: Job? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -127,8 +126,11 @@ class MainActivity : ComponentActivity() {
     mainScaffoldController: MainScaffoldController,
   ): ForegroundComponent {
     return remember {
-      (appComponent as ForegroundComponent.ParentComponent).foregroundComponentFactory()
-        .create(activity = this, screenRegistry = screenRegistry, mainScaffoldController = mainScaffoldController)
+      (appComponent as ForegroundComponent.ParentComponent).foregroundComponentFactory().create(
+        activity = this,
+        screenRegistry = screenRegistry,
+        mainScaffoldController = mainScaffoldController
+      )
     }
   }
 }

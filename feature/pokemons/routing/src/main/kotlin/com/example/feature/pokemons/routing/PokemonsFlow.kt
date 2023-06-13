@@ -3,9 +3,11 @@ package com.example.feature.pokemons.routing
 import com.pokemons.core.routing.BaseFlowCoordinator
 import com.pokemons.core.routing.di.DestinationsIn
 import com.pokemons.core.ui.scaffold.MainScaffoldController
+import com.pokemons.core.ui.scaffold.pushMain
 import com.pokemons.feature.core.domain.di.SingleIn
 import com.pokemons.feature.pokemons.domain.di.PokemonsScope
 import com.pokemons.feature.pokemons.ui.navigation.FlowEvent
+import com.pokemons.feature.pokemons.ui.navigation.PokemonsRoutes
 import com.pokemons.mvi.screen.Destination
 import com.pokemons.navigation.ScreenRegistry
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -26,6 +28,11 @@ object PokemonsFlow {
   ) : BaseFlowCoordinator<FlowEvent, Result>(
     controller, destinations, flowEvents, screenRegistry
   ) {
+
+    override fun onFlowStart() {
+      controller.pushMain(route = PokemonsRoutes.PokemonsMain)
+    }
+
     override fun handleEvent(event: FlowEvent) {
       when(event) {
         else -> Unit
