@@ -3,6 +3,7 @@ package com.example.feature.pokemons.routing
 import com.pokemons.core.routing.BaseFlowCoordinator
 import com.pokemons.core.routing.di.DestinationsIn
 import com.pokemons.core.ui.scaffold.MainScaffoldController
+import com.pokemons.core.ui.scaffold.popMainTo
 import com.pokemons.core.ui.scaffold.pushMain
 import com.pokemons.feature.core.domain.di.SingleIn
 import com.pokemons.feature.pokemons.domain.di.PokemonsScope
@@ -30,12 +31,17 @@ object PokemonsFlow {
   ) {
 
     override fun onFlowStart() {
-      controller.pushMain(route = PokemonsRoutes.PokemonsMain)
+      controller.pushMain(route = PokemonsRoutes.Login)
     }
 
     override fun handleEvent(event: FlowEvent) {
       when(event) {
-        else -> Unit
+        is FlowEvent.CreateAccountRequested -> {
+          controller.pushMain(route = PokemonsRoutes.CreateAccount)
+        }
+        FlowEvent.CreateAccountDismissed -> {
+          controller.popMainTo(route = PokemonsRoutes.Login)
+        }
       }
     }
   }

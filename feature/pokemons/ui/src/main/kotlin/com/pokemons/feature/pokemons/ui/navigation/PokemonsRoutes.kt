@@ -4,7 +4,8 @@ import com.pokemons.mvi.screen.Route
 import dagger.MapKey
 
 enum class PokemonsRoutes(override val path: String) : Route {
-  PokemonsMain("pokemons/main"),
+  Login("pokemons/login"),
+  CreateAccount("pokemons/create-account"),
 }
 
 @MapKey

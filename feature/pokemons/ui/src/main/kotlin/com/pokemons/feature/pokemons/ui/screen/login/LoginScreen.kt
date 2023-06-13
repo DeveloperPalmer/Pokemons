@@ -1,4 +1,4 @@
-package com.pokemons.feature.pokemons.ui.screen.main
+package com.pokemons.feature.pokemons.ui.screen.login
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -25,7 +25,7 @@ import com.pokemons.mvi.BaseViewIntents
 import com.pokemons.mvi.rememberViewIntents
 
 @Composable
-fun PokemonsMainScreen(model: PokemonsMainViewModel) {
+fun LoginScreen(model: LoginViewModel) {
   MviScreen(
     viewModel = model,
     intents = rememberViewIntents(),
