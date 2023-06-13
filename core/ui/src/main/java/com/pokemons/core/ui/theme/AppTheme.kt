@@ -31,12 +31,12 @@ fun AppTheme(
   val colorPalette = remember(useDarkTheme, currentTheme) {
     if (useDarkTheme) {
       when (currentTheme) {
-        ColorTheme.Violet -> DarkVioletColorPalette
+        ColorTheme.Default -> DarkColorPalette
         ColorTheme.Green -> DarkGreenColorPalette
       }
     } else {
       when (currentTheme) {
-        ColorTheme.Violet -> LightVioletColorPalette
+        ColorTheme.Default -> LightColorPalette
         ColorTheme.Green -> LightGreenColorPalette
       }
     }
@@ -47,8 +47,8 @@ fun AppTheme(
     typography = MaterialTypography,
   ) {
     val textSelectionColors = TextSelectionColors(
-      handleColor = colorPalette.brandColorAccent,
-      backgroundColor = colorPalette.brandBackground
+      handleColor = colorPalette.primary,
+      backgroundColor = colorPalette.background
     )
     CompositionLocalProvider(
       LocalAppColors provides colorPalette,
@@ -89,7 +89,7 @@ private val DebugColor = Color.Magenta
 
 @Immutable
 enum class ColorTheme {
-  Green, Violet
+  Green, Default
 }
 
 val LocalColorTheme = staticCompositionLocalOf<ColorTheme> {
