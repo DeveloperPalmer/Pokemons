@@ -5,6 +5,7 @@ import com.pokemons.core.routing.di.DestinationsIn
 import com.pokemons.core.ui.scaffold.MainScaffoldController
 import com.pokemons.core.ui.scaffold.pushMain
 import com.pokemons.feature.core.domain.di.SingleIn
+import com.pokemons.feature.pokemons.domain.PokemonsModel
 import com.pokemons.feature.pokemons.domain.di.PokemonsScope
 import com.pokemons.feature.pokemons.ui.navigation.FlowEvent
 import com.pokemons.feature.pokemons.ui.navigation.PokemonsRoutes
@@ -25,9 +26,14 @@ object PokemonsFlow {
     flowEvents: MutableSharedFlow<FlowEvent>,
     screenRegistry: ScreenRegistry,
     private val controller: MainScaffoldController,
+    private val model: PokemonsModel,
   ) : BaseFlowCoordinator<FlowEvent, Result>(
     controller, destinations, flowEvents, screenRegistry
   ) {
+
+    init {
+      model.start(coroutineScope)
+    }
 
     override fun onFlowStart() {
       controller.pushMain(route = PokemonsRoutes.PokemonsMain)
@@ -35,7 +41,18 @@ object PokemonsFlow {
 
     override fun handleEvent(event: FlowEvent) {
       when(event) {
-        is FlowEvent.CreateAccountRequested -> controller.pushMain(route = PokemonsRoutes.CreateAccount)
+        is FlowEvent.CreateAccountRequested -> {
+          controller.pushMain(route = PokemonsRoutes.CreateAccount)
+        }
+        is FlowEvent.CreateAccountDismissed -> {
+          controller.popMainTo(route = PokemonsRoutes.Login)
+        }
+        is FlowEvent.PokemonsRequested -> {
+          controller.pushMain(route = PokemonsRoutes.Pokemons)
+        }
+        is FlowEvent.PokemonsDismissed -> {
+          controller.popMainTo(route = PokemonsRoutes.CreateAccount)
+        }
       }
     }
   }

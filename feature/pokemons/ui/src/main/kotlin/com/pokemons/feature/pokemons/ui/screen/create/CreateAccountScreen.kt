@@ -22,6 +22,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import com.pokemons.core.ui.R
 import com.pokemons.core.ui.screen.MviScreen
+import com.pokemons.core.ui.screen.OnBackPressedHandler
 import com.pokemons.core.ui.theme.AppTheme
 import com.pokemons.core.uikit.PrimaryButton
 import com.pokemons.core.uikit.VSpacer
@@ -37,6 +38,7 @@ fun CreateAccountScreen(model: CreateAccountViewModel) {
     viewModel = model,
     intents = rememberViewIntents(),
   ) { state, intent ->
+    OnBackPressedHandler(onBack = intent.navigateBack)
     Column(
       modifier = Modifier
         .systemBarsPadding()

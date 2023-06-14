@@ -42,7 +42,9 @@ class CreateAccountViewModel @Inject constructor(
       }
     }
     onEach(intent(ViewIntents::createAccount)) {
-
+      action { _, _, _ ->
+        flowEvents.tryEmit(FlowEvent.PokemonsRequested)
+      }
     }
   }
 }
