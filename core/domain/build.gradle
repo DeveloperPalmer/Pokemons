@@ -9,6 +9,8 @@ dependencies {
     api libs.bundles.coreLibs
     api libs.composeRuntime
 
+    api libs.remo
+
     implementation libs.dagger
     kapt libs.daggerCompiler
 }

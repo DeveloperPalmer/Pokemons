@@ -7,6 +7,8 @@ import com.pokemons.feature.pokemons.ui.screen.create.CreateAccountScreen
 import com.pokemons.feature.pokemons.ui.screen.create.CreateAccountViewModel
 import com.pokemons.feature.pokemons.ui.screen.login.LoginScreen
 import com.pokemons.feature.pokemons.ui.screen.login.LoginViewModel
+import com.pokemons.feature.pokemons.ui.screen.pokemons.PokemonsScreen
+import com.pokemons.feature.pokemons.ui.screen.pokemons.PokemonsViewModel
 import com.pokemons.mvi.screen.ComposableScreen
 import com.squareup.anvil.annotations.ContributesTo
 import dagger.Module
@@ -34,6 +36,16 @@ object PokemonsUiModule {
     return ComposableScreen(
       viewModel = model,
       content = { CreateAccountScreen(model = model) }
+    )
+  }
+
+  @Provides
+  @IntoMap
+  @RouteKey(PokemonsRoutes.Pokemons)
+  fun providesPokemonsScreen(model: PokemonsViewModel): ComposableScreen {
+    return ComposableScreen(
+      viewModel = model,
+      content = { PokemonsScreen(model = model) }
     )
   }
 }

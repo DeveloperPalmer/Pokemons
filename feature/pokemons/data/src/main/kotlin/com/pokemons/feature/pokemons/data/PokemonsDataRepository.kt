@@ -22,12 +22,10 @@ class PokemonsDataRepository @Inject constructor(
     val pokemonStartIndex = page * count
     val pokemons = mutableListOf<Pokemon>()
     repeat(count) {
-      coroutineScope
-        .launch {
-          val item: Pokemon = pokemonsApi.requestPokemonById(id = pokemonStartIndex)
-          pokemons.add(item)
-        }
-        .join()
+      coroutineScope.launch {
+        val item: Pokemon = pokemonsApi.requestPokemonById(id = pokemonStartIndex)
+        pokemons.add(item)
+      }.join()
     }
     coroutineScope.cancel()
     return pokemons

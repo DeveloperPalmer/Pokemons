@@ -7,5 +7,6 @@ dependencies {
     implementation project(":core:domain")
 
     implementation libs.dagger
+    implementation libs.dagger
     kapt libs.daggerCompiler
 }
