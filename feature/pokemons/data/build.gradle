@@ -1,12 +1,19 @@
 plugins {
     id 'android-library-convention'
     alias(libs.plugins.anvil)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 dependencies {
     api project(':core:data')
+    implementation project(':feature:app')
     implementation project(':core:domain')
     implementation project(':feature:pokemons:domain')
+
+    implementation libs.ktor
+    implementation libs.ktorAuth
+    implementation libs.ktorJsonSerialization
+    implementation libs.ktorContentNegotiation
 
     implementation libs.dagger
     kapt libs.daggerCompiler

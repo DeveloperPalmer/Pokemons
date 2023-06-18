@@ -7,6 +7,7 @@ import com.pokemons.feature.bottombar.ui.BottomBarController
 import com.pokemons.feature.core.domain.di.ActivityContext
 import com.pokemons.feature.core.domain.di.SingleIn
 import com.pokemons.navigation.ScreenRegistry
+import com.sla.feature.app.AppScope
 import com.squareup.anvil.annotations.ContributesSubcomponent
 import com.squareup.anvil.annotations.ContributesTo
 import dagger.BindsInstance
@@ -28,8 +29,6 @@ interface ForegroundComponent {
   fun pokemonsFlowComponent(): PokemonsFlowComponent
 
   fun bottomBarController(): BottomBarController
-  fun mainScaffoldController(): MainScaffoldController
-  fun screenRegistry(): ScreenRegistry
 
   @ContributesSubcomponent.Factory
   interface Factory {
@@ -50,12 +49,3 @@ object ForegroundModule {
   @SingleIn(ForegroundScope::class)
   fun provideBottomBarController(): BottomBarController = BottomBarController()
 }
-
-@Qualifier
-@Retention(AnnotationRetention.RUNTIME)
-annotation class MainNavigation
-
-@Qualifier
-@Retention(AnnotationRetention.RUNTIME)
-annotation class BottomSheetNavigation
-
