@@ -9,12 +9,14 @@ import javax.inject.Inject
 
 @SingleIn(PokemonsScope::class)
 class PokemonsModel @Inject constructor(
-  private val pokemonsRepository: PokemonsRepository
-): ReactiveModel() {
+  private val repository: PokemonsRepository
+) : ReactiveModel() {
 
   val pokemons = task<Int, List<Pokemon>> { pages ->
-    pokemonsRepository.getPokemons(pages)
+    repository.getPokemons(pages)
   }
 
-  fun cancel() { scope.cancel() }
+  fun cancel() {
+    scope.cancel()
+  }
 }

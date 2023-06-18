@@ -11,7 +11,7 @@ import javax.inject.Inject
 class PokemonsViewModel @Inject constructor(
   private val model: PokemonsModel,
   private val flowEvents: MutableSharedFlow<FlowEvent>
-): BaseViewModel<ViewState, ViewIntents, Unit, Unit>() {
+) : BaseViewModel<ViewState, ViewIntents, Unit, Unit>() {
 
   override fun MachineDsl<ViewState, Unit>.buildMachine() {
     initial = ViewState() to { model.pokemons.start(1) }

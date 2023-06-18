@@ -91,6 +91,7 @@ accompanistPlaceholder = { module = "com.google.accompanist:accompanist-placehol
 
 coilBase = { module = "io.coil-kt:coil-base", version.ref = "coil" }
 coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+coilSVG = { module = "io.coil-kt:coil-svg", version.ref = "coil" }
 
 lifecycle = { module = "androidx.lifecycle:lifecycle-common", version.ref = "lifecycle" }
 lifecycleProcess = { module = "androidx.lifecycle:lifecycle-process", version.ref = "lifecycle" }
@@ -225,6 +226,7 @@ androidUiLibs = [
     "snapper",
     "coilBase",
     "coilCompose",
+    "coilSVG",
     "unicorn",
     "navigation",
     "navigationKtx",

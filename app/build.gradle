@@ -50,11 +50,20 @@ android {
 
 dependencies {
     implementation libs.bundles.androidUiLibs
+
+    implementation libs.ktor
+    implementation libs.ktorAuth
+    implementation libs.ktorLogging
+    implementation libs.ktorAndroidEngine
+    implementation libs.ktorSerialization
+    implementation libs.ktorJsonSerialization
+    implementation libs.ktorContentNegotiation
+
     implementation libs.dagger
-    implementation 'com.google.ar:core:1.30.0'
     kapt libs.daggerCompiler
 
     api project(':core:domain')
+    api project(':feature:app')
     api project(':feature:bottombar:ui')
     api project(':feature:bottombar:domain')
     api project(":feature:pokemons:routing")
