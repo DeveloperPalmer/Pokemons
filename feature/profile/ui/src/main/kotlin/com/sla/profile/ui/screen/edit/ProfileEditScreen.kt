@@ -50,6 +50,13 @@ fun ProfileEditScreen(model: ProfileEditViewModel) {
         ViewEvent.AlreadyCreated -> ViewEventPresentation.Snackbar(
           message = resRef(R.string.account_already_created_message),
         )
+
+        ViewEvent.EmailChanged -> ViewEventPresentation.Snackbar(
+          message = resRef(R.string.email_changed_message),
+        )
+        ViewEvent.PasswordChanged -> ViewEventPresentation.Snackbar(
+          message = resRef(R.string.password_changed_message),
+        )
       }
     }
   ) { state, intent ->
@@ -168,6 +175,8 @@ data class ViewState(
 sealed class ViewEvent {
   object Success: ViewEvent()
   object AlreadyCreated: ViewEvent()
+  object PasswordChanged: ViewEvent()
+  object EmailChanged : ViewEvent()
 }
 
 @Composable

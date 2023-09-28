@@ -28,6 +28,8 @@
     <string name="show">SHOW</string>
     <string name="repeate_password">Repeat the password</string>
     <string name="account_already_created_message">Account already created</string>
+    <string name="email_changed_message">Email changed</string>
+    <string name="password_changed_message">Password changed</string>
     <string name="edit_email">Edit Email</string>
     <string name="edit_password">Edit password</string>
     <string name="old_password">Old password</string>

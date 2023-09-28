@@ -61,7 +61,7 @@ class ProfileEditViewModel @Inject constructor(
         }
       },
       onSuccess = { _, _, _ ->
-        sendViewEvent(ViewEvent.Success)
+        sendViewEvent(ViewEvent.EmailChanged)
         flowEvents.tryEmit(FlowEvent.ProfileEditDismissed)
       }
     )
@@ -74,7 +74,7 @@ class ProfileEditViewModel @Inject constructor(
         state.copy(authError = error?.cause as? AuthException)
       },
       onSuccess = { _, _, _ ->
-        sendViewEvent(ViewEvent.Success)
+        sendViewEvent(ViewEvent.PasswordChanged)
         flowEvents.tryEmit(FlowEvent.ProfileEditDismissed)
       }
     )
